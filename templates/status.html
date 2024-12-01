@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+</head>
+
+<body>
+    <h1>Student Status</h1>
+    {% if allstudentsdetails %}
+        {% for student in allstudentsdetails %}
+            <li>
+                STUDENT REGISTRATION NUMBER: {{ student.StudentRegNumber }}<br>
+                STUDENT NAME: {{ student.StudentName }}<br>
+                NAME OF THE PROGRAMME: {{ student.NameOftheProgramme }}<br>
+                ADDRESS: {{ student.StudentAddress }}<br>
+                CONTACT: {{ student.ContactMobileNumber }}<br>
+                STATUS OF SEMESTER FEE: {{ student.StatusOftheSemesterFee }}<br>
+            </li>
+        {% endfor %}
+    {% else %}
+        <p>No student data available.</p>
+    {% endif %}
+</body>
+
+</html>

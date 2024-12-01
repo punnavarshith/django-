@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+    <form  method="POST">
+        {% csrf_token %}
+        student  register number <input type="number" name="StudentRegNumber" id="StudentRegNumber"><br>
+        student name <input type="text" name="StudentName" id="StudentName"><br>
+        Name Of the Programme <input type="text" name="NameOftheProgramme" id="NameOftheProgramme">  <br>
+        Student Address <input type="text" name="StudentAddress" id="StudentAddress"><br>
+        Contact MobileNumber <input type="text" name="ContactMobileNumber" id="ContactMobileNumber"><br>
+        StatusOftheSemesterFee    <label>Select True or False:</label><br>
+        <input type="radio" id="true" name="StatusOftheSemesterFee" value="true">
+        <label for="true">True</label><br>
+        <input type="radio" id="false" name="StatusOftheSemesterFee" value="false">
+        <label for="false">False</label><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
